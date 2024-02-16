@@ -51,12 +51,11 @@ html {
     margin: 0 auto;
 }
 
-.categories:has(figure:hover) figure {
+.categories:has(figure:hover) figure:not(:hover) {
     filter: blur(.5em);
 }
 
 figure:hover {
-    filter: none !important;
     scale: 1.1;
 }
 
