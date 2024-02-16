@@ -1,0 +1,116 @@
+:root {
+    --text-light: #e9e9e9;
+}
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+.page-header {
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 1em;;
+}
+.categories {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* použijte auto-fit s šířkou sloupce minimálně 300px */
+    padding: 1em;
+    gap: 1em;
+}
+.categories__item {
+    position: relative;
+    color: inherit;
+    /* max-height: 80vh; */
+}
+.categories__item:hover {
+    box-shadow: 0 0 8px 8px var(--text-light);
+}
+.categories__item-image {
+    filter: brightness(0.9) saturate(1) contrast(1);
+}
+.categories__item-description {
+    padding: 1em;
+    color: var(--text-light);
+}
+/* TODO */
+
+
+.page-header {
+    background: url("../images/egypt.jpg") no-repeat top center;
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    color: var(--text-light);
+}
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+    padding: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categories:has(figure:hover) figure {
+    filter: blur(.5em);
+}
+
+figure:hover {
+    filter: none !important;
+    scale: 1.1;
+}
+
+figure:hover .categories__item-description {
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+figure {
+    margin: 0;
+    position: relative;
+    border-radius: .5em;
+    transition: all .5s ease;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .5em;
+}
+
+.categories__item-description {
+    transition: all .5s ease;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1em;
+    width: max-content;
+    color: var(--text-light);
+}
+
+
+
+
+
+/* Global */
+.img-responsive {
+    width: 100%;
+    display: block;
+}
+figure, h2 {
+    margin: 0;
+}
+.heading {
+    margin: 0.25em 0;
+    font-weight: bold;
+}
+.heading--h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+    color: var(--text-light);
+}
+
+
